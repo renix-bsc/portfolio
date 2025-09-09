@@ -1,0 +1,171 @@
+:root{
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #94a3b8;
+    --accent: #60a5fa;
+    --glass: rgba(255,255,255,0.03);
+    --radius: 14px;
+    --max: 1000px;
+    --container-pad: 1.25rem;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color-scheme: dark;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,#071026 0%, #081126 60%);
+    color:#e6eef8;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+    font-size:16px;
+  }
+  
+  .container{
+    width:clamp(320px,90%,var(--max));
+    margin:0 auto;
+    padding:var(--container-pad);
+  }
+  
+  /* Header */
+  .site-header{
+    position:sticky;
+    top:0;
+    backdrop-filter: blur(6px);
+    background: linear-gradient(90deg, rgba(3,7,18,0.6), rgba(3,7,18,0.4));
+    border-bottom:1px solid rgba(255,255,255,0.03);
+    z-index:30;
+  }
+  .site-header .container{
+    display:flex;
+    gap:1rem;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .logo{
+    font-weight:700;
+    letter-spacing:0.3px;
+    color:var(--accent);
+    text-decoration:none;
+  }
+  .nav{display:flex;gap:1rem}
+  .nav-link{
+    color:var(--muted);
+    text-decoration:none;
+    padding:0.45rem 0.6rem;
+    border-radius:8px;
+    font-weight:600;
+  }
+  .nav-link:hover{color:#fff;background:var(--glass)}
+  
+  /* Hero */
+  .hero{
+    padding:3.5rem 0;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1fr 320px;
+    gap:1.5rem;
+    align-items:center;
+  }
+  .hero-text h1{
+    margin:0 0 0.6rem 0;
+    font-size:clamp(1.4rem,2.8vw,2.2rem);
+    line-height:1.05;
+  }
+  .hero-text p{margin:0 0 1rem;color:var(--muted)}
+  .btn{
+    display:inline-block;
+    padding:0.55rem 0.9rem;
+    border-radius:10px;
+    background:linear-gradient(90deg,var(--accent),#3b82f6);
+    color:#04243a;
+    text-decoration:none;
+    font-weight:700;
+    border:0;
+    cursor:pointer;
+  }
+  .btn-ghost{
+    background:transparent;
+    color:var(--muted);
+    border:1px solid rgba(255,255,255,0.03);
+  }
+  
+  /* Skill badges card */
+  .hero-card{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:1rem;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  .skill-badges{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem;
+    justify-content:center;
+  }
+  .skill-badges li{
+    font-weight:700;
+    padding:0.5rem 0.8rem;
+    border-radius:999px;
+    background:rgba(255,255,255,0.02);
+    color:var(--muted);
+    font-size:0.9rem;
+  }
+  
+  /* Sections */
+  .section{padding:2.25rem 0}
+  .section h2{margin:0 0 0.4rem 0}
+  .muted{color:var(--muted)}
+  .small{font-size:0.85rem}
+  
+  /* Skills grid */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem;
+    margin-top:1rem;
+  }
+  .skill{
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:1rem;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  
+  /* Contact */
+  .contact-card{
+    max-width:720px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding:1rem;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  .contact-form{display:grid;gap:0.6rem;margin-top:0.6rem}
+  .contact-form label{display:flex;flex-direction:column;gap:0.35rem;font-weight:600}
+  .contact-form input,
+  .contact-form textarea{
+    padding:0.6rem;
+    border-radius:8px;
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.04);
+    color:inherit;
+    font-size:0.95rem;
+  }
+  
+  /* footer */
+  .site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
+  
+  /* Responsive */
+  @media (max-width:880px){
+    .hero-inner{grid-template-columns:1fr}
+    .nav{display:none}
+    .menu-btn{display:inline-block}
+  }
+  .menu-btn{display:none;background:transparent;border:0;color:var(--muted);font-size:1.2rem;cursor:pointer}
+  

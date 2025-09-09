@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>J R Jaswanthraj — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="#home" class="logo">J R Jaswanthraj</a>
+      <nav class="nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#skills" class="nav-link">My Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>A 15 year old boy with skills in coding and AI</h1>
+          <p>Hi — I'm Jaswanth. I build things with HTML, CSS, JavaScript and explore Machine Learning & AI using Python.</p>
+          <div class="hero-cta">
+            <a href="#skills" class="btn">See my skills</a>
+            <a href="#contact" class="btn btn-ghost">Contact me</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <ul class="skill-badges">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>Machine Learning</li><li>AI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>My Skills</h2>
+        <p class="muted">Technologies I work with and learn:</p>
+        <div class="skills-grid">
+          <article class="skill">
+            <h3>Frontend</h3>
+            <p>HTML • CSS • JavaScript — building interactive web pages and responsive designs.</p>
+          </article>
+          <article class="skill">
+            <h3>Programming</h3>
+            <p>Python — scripting, data-processing and prototyping ML models.</p>
+          </article>
+          <article class="skill">
+            <h3>Machine Learning & AI</h3>
+            <p>Exploring basic ML algorithms, training models and deploying small projects.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Get in touch — email me directly:</p>
+        <div class="contact-card">
+          <p><strong>Email:</strong> <a href="mailto:jrjaswanthraj@gmail.com">jrjaswanthraj@gmail.com</a></p>
+          <p>You can write a short message and send it to the email above.</p>
+          <form id="contactForm" class="contact-form" onsubmit="return false;">
+            <label>
+              Your name
+              <input type="text" id="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Message
+              <textarea id="message" rows="4" placeholder="Write a short message" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button id="sendBtn" class="btn">Send email</button>
+              <button id="clearBtn" type="button" class="btn btn-ghost">Clear</button>
+            </div>
+            <p id="mailNote" class="muted small">Clicking "Send email" opens your mail client with the message pre-filled.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> J R Jaswanthraj — Built with HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
